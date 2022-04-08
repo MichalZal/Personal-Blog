@@ -1,0 +1,11 @@
+.main {
+    width: 95%;
+    margin: 0 auto;
+    background-color: blue;
+    border-radius: 1rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: min-content(auto), max-content(1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}

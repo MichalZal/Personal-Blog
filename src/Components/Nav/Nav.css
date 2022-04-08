@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Poppins:wght@100&display=swap");
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 8rem;
+}
+.navbar .navbarLogo {
+  grid-template-columns: 1/2;
+  display: flex;
+  padding: 3rem 0.5rem;
+  margin: 0;
+  font-size: 1.5em;
+  position: relative;
+  top: -30px;
+}
+.navbar .navbarLogo a {
+  text-decoration: none;
+  font-family: "Grape Nuts", cursive;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 2em;
+  color: white;
+  line-height: 1.3;
+}
+.navbar .navbarLogo a .name {
+  font-family: "Grape Nuts", cursive;
+  z-index: 10;
+}
+.navbar .navbarLogo a .secondName {
+  font-family: "Grape Nuts", cursive;
+  z-index: 10;
+}
+.navbar .navbarLogo a .secondName::after {
+  content: " ";
+  display: block;
+  position: relative;
+  top: -30px;
+  right: -30px;
+  width: 130px;
+  height: 20px;
+  background: blue;
+  z-index: -1;
+  clip-path: circle(75px);
+  transition: all 0.2s ease-in-out;
+}
+.navbar .navbarLogo a .secondName:hover::after {
+  background: darkblue;
+  width: 160px;
+  right: -7px;
+  border-radius: 0.6rem;
+}
+.navbar .navbarLinks {
+  grid-template-columns: 2/3;
+  position: relative;
+  text-align: end;
+  display: flex;
+}
+.navbar .navbarLinks .socialLinks {
+  display: flex;
+  position: relative;
+  top: 1px;
+  margin-right: 1rem;
+  gap: 1rem;
+  background-color: blue;
+  max-height: 43px;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.navbar .navbarLinks ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.navbar .navbarLinks .navbarLink {
+  padding: 0.8rem 0.5rem;
+  margin: 0.2rem;
+  transition: 1s all ease;
+}
+.navbar .navbarLinks .navbarLink:first-child {
+  padding: 0.7rem 0.5rem;
+  background-color: blue;
+  border-radius: 1em;
+}
+.navbar .navbarLinks .navbarLink a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.navbar .navbarLinks .navbarLink a:hover {
+  text-shadow: 1px 2px 1rem gray;
+  color: gray;
+}
+.navbar .info {
+  grid-template-columns: 1/-1;
+}
+@media (max-width: 550px) {
+  .navbar .navbarLinks {
+    position: absolute;
+    right: -200px;
+    top: 150px;
+    transition: 0.2s all ease-in-out;
+  }
+  .navbar .socialLinks {
+    display: none;
+    background-color: none;
+  }
+  .navbar .socialLinks .github {
+    display: none;
+  }
+  .navbar .socialLinks .facebook {
+    display: none;
+  }
+  .navbar .hamMenu {
+    width: 50px;
+    height: 50px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -10px;
+    right: 20px;
+    align-items: flex-end;
+  }
+  .navbar .hamMenu .bar {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+  }
+  .navbar .hamMenu #bar2 {
+    width: 25px;
+  }
+  .navbar .navbarLinks-active {
+    display: flex;
+    flex-direction: column;
+    transition: 1s all ease;
+    position: absolute;
+    right: 0;
+  }
+  .navbar .navbarLinks-active .socialLinks {
+    display: none;
+    background-color: none;
+  }
+  .navbar .navbarLinks-active .socialLinks .github {
+    display: none;
+  }
+  .navbar .navbarLinks-active .socialLinks .facebook {
+    display: none;
+  }
+}
+.navbar .hamMenu-active {
+  position: relative;
+  right: 20px;
+}
+.navbar .hamMenu-active #bar1 {
+  transform: rotate(-45deg) translate(-5px, 13px);
+}
+.navbar .hamMenu-active #bar3 {
+  transform: rotate(45deg) translate(-5px, -13px);
+}
+.navbar .hamMenu-active #bar2 {
+  width: 0px;
+}
+
+/*# sourceMappingURL=Nav.css.map */
