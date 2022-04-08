@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -55,7 +56,7 @@ table {
 body {
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-image: url('../../svg/secondImage.jpg');
 }
 
 .App {
