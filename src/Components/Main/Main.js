@@ -5,9 +5,10 @@ const Main = () => {
   return (
     <main className='main'>
       <div className='gird'>
-        <section>Hello</section>
-        <section>Hello2</section>
-        <section>Hello3</section>
+        <section>Ostatnie nowe wiadomości</section>
+        <section>Ciekawoski</section>
+        <section>do nauki</section>
+        <section></section>
       </div>
     </main>
   )
