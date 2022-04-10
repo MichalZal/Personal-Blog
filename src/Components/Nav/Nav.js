@@ -1,6 +1,7 @@
 import React from 'react'
 import './Nav.css'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// próbowałem pobrać ikonki do reacta z font awesome ale się nie udało xddd
 
 const Nav = () => {
   
