@@ -3,6 +3,7 @@ import './Nav.css'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Nav = () => {
+  
   const toggleHamMenu = (e) => {
     const hamMenu = document.querySelector('.hamMenu')
     const navbarLinks = document.querySelector('.navbarLinks')
@@ -10,7 +11,6 @@ const Nav = () => {
     hamMenu.classList.toggle('hamMenu-active')
     navbarLinks.classList.toggle('navbarLinks-active')
   }
-
 
   return (
     <>
@@ -38,7 +38,7 @@ const Nav = () => {
           <span className="bar" id="bar3"></span>
         </div>
         <div className='info'>
-          <p> Hello. My name is Michał Zalewski. I really like front-end development, but I can also do back-end.
+          <p> Hello. My name is <span>Michał Zalewski</span>. I really like front-end development, but I can also do back-end.
             My favourite technologies are React and NodeJS 
           </p>
         </div>
