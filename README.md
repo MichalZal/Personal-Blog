@@ -1,4 +1,4 @@
-# React app? Great thing but nobody accually cares about that xd
+# React app? Great thing but nobody actually cares about that xd
 
 # Getting Started with Create React App
 
