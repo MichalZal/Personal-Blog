@@ -3,6 +3,7 @@ import './Nav.css'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // próbowałem pobrać ikonki do reacta z font awesome ale się nie udało xddd
 
+// animacja Hamburger menu
 const Nav = () => {
   
   const toggleHamMenu = (e) => {
