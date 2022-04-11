@@ -5,7 +5,7 @@ const Main = () => {
   return (
     <main className='main'>
       <div className='gird'>
-        <section>Ostatnie nowe wiadomości</section>
+        <section className='recent-info'>Ostatnie nowe wiadomości</section>
         <section>Ciekawoski</section>
         <section>do nauki</section>
         <section></section>
