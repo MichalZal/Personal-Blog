@@ -1,18 +1,18 @@
 import React from 'react'
 import './Nav.css'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// próbowałem pobrać ikonki do reacta z font awesome ale się nie udało xddd
 
-// animacja Hamburger menu
 const Nav = () => {
-  
-  const toggleHamMenu = (e) => {
+  function toggleHamMenu(e) {
     const hamMenu = document.querySelector('.hamMenu')
+
     const navbarLinks = document.querySelector('.navbarLinks')
 
     hamMenu.classList.toggle('hamMenu-active')
+    
     navbarLinks.classList.toggle('navbarLinks-active')
   }
+
 
   return (
     <>
@@ -40,7 +40,7 @@ const Nav = () => {
           <span className="bar" id="bar3"></span>
         </div>
         <div className='info'>
-          <p> Hello. My name is <span>Michał Zalewski</span>. I really like front-end development, but I can also do back-end.
+          <p> Hello. My name is Michał Zalewski. I really like front-end development, but I can also do back-end.
             My favourite technologies are React and NodeJS 
           </p>
         </div>
