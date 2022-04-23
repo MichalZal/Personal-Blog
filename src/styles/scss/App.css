@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow: hidden;
 }
 
 ol, ul {
@@ -60,12 +61,13 @@ table {
 body {
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: #fff;
 }
 
 .App {
   display: grid;
   grid-template-columns: 1fr;
+  overflow-y: 'scroll',
 }
 
 /*# sourceMappingURL=App.css.map */
