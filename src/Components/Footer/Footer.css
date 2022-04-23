@@ -1,19 +1,29 @@
-
-
-/*# sourceMappingURL=Footer.css.map */
-
-
 .footer {
-  max-width: 600px;
-  background-color: gray;
-  display: flex;
-  flex-wrap: wrap:
-  justify-content: space-beetwen;
-}
-
-footer {
+  max-width: 100%;
   width: 100%;
   background-color: black;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
   padding: 1rem;
-  
 }
+.footer-section1 {
+  color: white;
+  display: grid;
+  gap: 0.3rem;
+}
+.footer-section2 {
+  color: white;
+  display: grid;
+  gap: 0.3rem;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */

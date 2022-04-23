@@ -5,19 +5,18 @@
   grid-template-rows: 1fr auto;
   align-items: center;
   position: relative;
-  max-width: 900px;
+  max-width: 1300px;
   margin: 0 auto;
   margin-bottom: 3rem;
 }
 .navbar .navbarLogo {
   grid-column: 1/2;
   display: flex;
-  margin: 3rem 0.5rem 1rem 0.5rem;
-  padding: 0 1rem;
-  font-size: clamp(1.5rem, 3vw, 2rem);
   position: relative;
   top: -30px;
-  grid-area: "logo";
+  margin: 3rem 0.5rem 1rem 0.5rem;
+  padding: 0 1rem;
+  font-size: clamp(1.8rem, 1.8vw, 2.9rem);
   max-width: 100%;
 }
 .navbar .navbarLogo a {
@@ -26,7 +25,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 2em;
-  color: white;
+  color: black;
   line-height: 1.3;
 }
 .navbar .navbarLogo a .name {
@@ -45,37 +44,26 @@
   right: -30px;
   width: 130px;
   height: 20px;
-  background: blue;
+  background: gray;
   z-index: -1;
   clip-path: circle(75px);
   transition: all 0.2s ease-in-out;
 }
 .navbar .navbarLogo a .secondName:hover::after {
-  background: darkblue;
-  width: 160px;
-  right: -7px;
+  background: gray;
+  width: 220px !important;
+  right: 25px;
   border-radius: 0.6rem;
 }
 .navbar .navbarLinks {
   position: relative;
+  top: 1rem;
   display: flex;
-  text-align: end;
-  right: 1rem;
-}
-.navbar .navbarLinks .socialLinks {
-  display: flex;
-  position: relative;
-  top: 4px;
+  text-align: center;
+  justify-self: center;
   gap: 1rem;
-  max-height: 30px;
-  align-items: center;
-  padding: 1rem 0.6rem;
-  background-color: blue;
-  border-radius: 0.8rem;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  text-transform: capitalize;
+  right: 1rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 .navbar .navbarLinks ul {
   list-style-type: none;
@@ -84,41 +72,74 @@
   margin: 0;
 }
 .navbar .navbarLinks .navbarLink {
-  padding: 0.8rem 0.5rem;
   margin: 0.2rem;
-  transition: 1s all ease;
-}
-.navbar .navbarLinks .navbarLink:first-child {
-  padding: 0.5rem;
-  background-color: blue;
-  border-radius: 1em;
+  transition: 0.6s all ease-out;
+  border-radius: 0.3rem;
 }
 .navbar .navbarLinks .navbarLink a {
+  display: inline-block;
+  padding: 0.6rem;
+  width: 100%;
   text-decoration: none;
-  color: white;
+  color: black;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-.navbar .navbarLinks .navbarLink a:hover {
+.navbar .navbarLinks .navbarLink:hover {
+  background-color: black;
+  color: white;
+}
+.navbar .navbarLinks .navbarLink:hover a {
   text-shadow: 1px 2px 1rem gray;
-  color: gray;
+  color: white;
+}
+.navbar .navbarLinks .navbarLink:first-child {
+  padding: 0.45rem;
+  background-color: black;
+  border-radius: 0.3rem;
+}
+.navbar .navbarLinks .navbarLink:first-child:hover {
+  background-color: gray;
+}
+.navbar .navbarLinks .navbarLink:first-child a {
+  color: white;
+}
+.navbar .navbarLinks .socialLinks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0.8rem 0.5rem;
+  border-radius: 0.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: 0.6s all ease-out;
+}
+.navbar .navbarLinks .socialLinks .facebook {
+  color: black;
+  text-shadow: 0px 0px 1rem rgba(0, 0, 255, 0.3);
+}
+.navbar .navbarLinks .socialLinks .github {
+  color: black;
+  text-shadow: 0px 0px 1rem rgba(105, 105, 255, 0.3);
 }
 .navbar .info {
   grid-column: 1/3;
   justify-content: center;
   justify-items: center;
-  max-width: 80ch;
+  max-width: 100%;
   line-height: 1.5;
   letter-spacing: 1px;
 }
 .navbar .info p {
   padding: 1rem 2rem;
-  font-size: clamp(0.9rem, 0.5vw, 1.2rem);
-  color: white;
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem);
+  color: black;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   .navbar .navbarLinks {
     position: absolute;
     right: -200px;
@@ -143,13 +164,13 @@
     flex-direction: column;
     position: relative;
     top: -10px;
-    right: 20px;
+    right: 30px;
     align-items: flex-end;
   }
   .navbar .hamMenu .bar {
-    width: 35px;
-    height: 3px;
-    background-color: white;
+    width: 45px;
+    height: 4px;
+    background-color: black;
     border-radius: 5px;
     transition: all 0.2s ease-out;
   }
@@ -171,7 +192,7 @@
   right: 20px;
 }
 .navbar .hamMenu-active #bar1 {
-  transform: rotate(-45deg) translate(-5px, 13px);
+  transform: rotate(-45deg) translate(-5px, 15px);
 }
 .navbar .hamMenu-active #bar3 {
   transform: rotate(45deg) translate(-5px, -13px);

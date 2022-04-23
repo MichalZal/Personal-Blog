@@ -1,0 +1,35 @@
+@use '../../styles/scss/colors';
+
+.footer {
+    max-width: 100%;
+    width: 100%;
+    background-color: colors.$font-color;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+
+    padding: 1rem;
+    
+    &-section1 {
+        color: white;
+        display: grid;
+        gap: .3rem;
+    }
+
+    &-section2 {
+        color: white;
+        display: grid;
+        gap: .3rem;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

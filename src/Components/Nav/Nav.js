@@ -5,10 +5,14 @@ import './Nav.css'
 const Nav = () => {
   function toggleHamMenu(e) {
     const hamMenu = document.querySelector('.hamMenu')
+
     const navbarLinks = document.querySelector('.navbarLinks')
+
     hamMenu.classList.toggle('hamMenu-active')
+    
     navbarLinks.classList.toggle('navbarLinks-active')
   }
+
 
   return (
     <>
