@@ -1,7 +1,7 @@
 @use '../../styles/scss/colors' as v;
 
 .main {
-    height: 1000px;
+    height: 1300px;
     max-width: 1300px;
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +9,7 @@
 
     padding: 1rem;
     margin: 0 auto;
+    // background-color: v.$background-color;
     color: v.$second-font-color;
     border-radius: .4rem;
 
@@ -40,11 +41,13 @@
         color: v.$background-color;
         padding: 1rem 1rem 2rem;
         border: 3px solid black;
+
         h1 {
             font-size: 1.5em;
             text-align: start;
             margin-bottom: 1rem;
         }
+
         p {
             line-height: 1.45;
             width: 400px;
@@ -52,6 +55,7 @@
             margin: 0 auto .5rem;
 
         }
+
         .grid-books {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -71,6 +75,7 @@
                 border-radius: .2rem;
                 cursor: pointer;
             }
+
             .grid:hover {
                 background-color: white;
                 border: none;
