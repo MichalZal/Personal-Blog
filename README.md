@@ -1,3 +1,4 @@
+![Zrzut ekranu 2022-04-24 223720](https://user-images.githubusercontent.com/78042518/164995590-e548911b-9ae6-43e1-92a8-bb2885982289.jpg)
 # React app? Great thing but nobody actually cares about that xd
 
 # Getting Started with Create React App
@@ -70,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-![Zrzut ekranu 2022-04-24 223720](https://user-images.githubusercontent.com/78042518/164995590-e548911b-9ae6-43e1-92a8-bb2885982289.jpg)
+
