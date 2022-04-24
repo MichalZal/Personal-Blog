@@ -4,6 +4,9 @@
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
   align-items: center;
+  border: 1px solid black;
+  border-radius: 0px 0px 2rem 2rem;
+  border-top: none;
   position: relative;
   max-width: 1300px;
   margin: 0 auto;
