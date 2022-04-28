@@ -1,9 +1,9 @@
-@use '../../styles/scss/colors';
+@use '../../styles/scss/colors' as c;
 
 .footer {
     max-width: 100%;
     width: 100%;
-    background-color: colors.$font-color;
+    background-color: c.$font-color;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
