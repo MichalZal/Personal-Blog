@@ -56,8 +56,6 @@ const addBooks = () => {
   })
 }
 
-
-
 const Main = () => {
   return (
     <main className='main' onLoad={addBooks}>
