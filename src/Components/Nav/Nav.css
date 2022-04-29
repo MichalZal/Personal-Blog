@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Poppins:wght@100&display=swap");
+.color {
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(150, 170, 0, 0.3), rgba(150, 0, 255, 0.3));
+  backdrop-filter: blur(2px);
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 93%, 84% 100%, 12% 100%, 0 90%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0, 100% 93%, 84% 100%, 12% 100%, 0 90%, 0 0);
+}
+
 .navbar {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 0px 0px 2rem 2rem;
-  border-top: none;
+  border-radius: 2rem;
   position: relative;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .navbar .navbarLogo {
   grid-column: 1/2;
@@ -19,15 +25,15 @@
   top: -30px;
   margin: 3rem 0.5rem 1rem 0.5rem;
   padding: 0 1rem;
-  font-size: clamp(1.8rem, 1.8vw, 2.9rem);
   max-width: 100%;
+  font-size: clamp(1.5rem, 1.6vw, 2.7rem);
 }
 .navbar .navbarLogo a {
   text-decoration: none;
   font-family: "Grape Nuts", cursive;
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 2em;
+  font-size: 2.5em;
   color: black;
   line-height: 1.3;
 }
@@ -66,7 +72,6 @@
   justify-self: center;
   gap: 1rem;
   right: 1rem;
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 .navbar .navbarLinks ul {
   list-style-type: none;
@@ -76,21 +81,21 @@
 }
 .navbar .navbarLinks .navbarLink {
   margin: 0.2rem;
-  transition: 0.6s all ease-out;
-  border-radius: 0.3rem;
+  transition: 0.6s background-color ease-out;
+  border-radius: 0.4rem;
 }
 .navbar .navbarLinks .navbarLink a {
   display: inline-block;
   padding: 0.6rem;
   width: 100%;
   text-decoration: none;
-  color: black;
+  color: rgba(150, 0, 255, 0.9);
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  font-size: clamp(1rem, 3vw, 1.3rem);
 }
 .navbar .navbarLinks .navbarLink:hover {
-  background-color: black;
-  color: white;
+  background-color: rgba(150, 0, 255, 0.9);
 }
 .navbar .navbarLinks .navbarLink:hover a {
   text-shadow: 1px 2px 1rem gray;
@@ -98,11 +103,15 @@
 }
 .navbar .navbarLinks .navbarLink:first-child {
   padding: 0.45rem;
-  background-color: black;
+  background-color: rgba(150, 0, 255, 0.9);
   border-radius: 0.3rem;
 }
 .navbar .navbarLinks .navbarLink:first-child:hover {
-  background-color: gray;
+  background-color: transparent;
+  outline: 2px solid rgba(150, 0, 255, 0.9);
+}
+.navbar .navbarLinks .navbarLink:first-child:hover a {
+  color: rgba(150, 0, 255, 0.9);
 }
 .navbar .navbarLinks .navbarLink:first-child a {
   color: white;
@@ -112,20 +121,71 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
-  padding: 0.8rem 0.5rem;
-  border-radius: 0.3rem;
+  padding: 0.2rem 0rem;
+  font-size: clamp(1rem, 3vw, 1.3rem);
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   text-transform: capitalize;
   transition: 0.6s all ease-out;
 }
 .navbar .navbarLinks .socialLinks .facebook {
-  color: black;
-  text-shadow: 0px 0px 1rem rgba(0, 0, 255, 0.3);
+  background-color: #3b5998;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease-out;
+}
+.navbar .navbarLinks .socialLinks .facebook a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+.navbar .navbarLinks .socialLinks .facebook a .face-logo {
+  font-size: 2em;
+}
+.navbar .navbarLinks .socialLinks .facebook:hover, .navbar .navbarLinks .socialLinks .facebook:focus {
+  outline: 1px solid black;
+}
+.navbar .navbarLinks .socialLinks .facebook:hover a, .navbar .navbarLinks .socialLinks .facebook:focus a {
+  background-color: rgba(0, 0, 255, 0.3);
 }
 .navbar .navbarLinks .socialLinks .github {
-  color: black;
-  text-shadow: 0px 0px 1rem rgba(105, 105, 255, 0.3);
+  background-color: #171515;
+  border-radius: 0.4rem;
+}
+.navbar .navbarLinks .socialLinks .github a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+.navbar .navbarLinks .socialLinks .github a .git-logo {
+  font-size: 2em;
+}
+.navbar .navbarLinks .socialLinks .github:hover, .navbar .navbarLinks .socialLinks .github:focus {
+  outline: 1px solid black;
+}
+.navbar .navbarLinks .socialLinks .github:hover a, .navbar .navbarLinks .socialLinks .github:focus a {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.navbar .navbarLinks .socialLinks .instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-radius: 0.4rem;
+}
+.navbar .navbarLinks .socialLinks .instagram a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+.navbar .navbarLinks .socialLinks .instagram a .insta-logo {
+  font-size: 2.1em;
+}
+.navbar .navbarLinks .socialLinks .instagram:hover, .navbar .navbarLinks .socialLinks .instagram:focus {
+  outline: 1px solid black;
+}
+.navbar .navbarLinks .socialLinks .instagram:hover a, .navbar .navbarLinks .socialLinks .instagram:focus a {
+  background-color: rgba(1, 1, 1, 0.2);
 }
 .navbar .info {
   grid-column: 1/3;
@@ -134,15 +194,27 @@
   max-width: 100%;
   line-height: 1.5;
   letter-spacing: 1px;
-}
-.navbar .info p {
+  margin-bottom: 2rem;
   padding: 1rem 2rem;
+}
+.navbar .info .about {
   font-size: clamp(1.1rem, 1.2vw, 1.3rem);
   color: black;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  position: relative;
 }
-@media (max-width: 700px) {
+.navbar .info .link {
+  background-image: linear-gradient(to right, rgba(150, 0, 255, 0.3), rgba(250, 0, 150, 0.3));
+  background-size: 0% 2.5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: 300ms all ease-out;
+}
+.navbar .info .link:hover {
+  background-size: 100% 2.5px;
+}
+@media (max-width: 750px) {
   .navbar .navbarLinks {
     position: absolute;
     right: -200px;
