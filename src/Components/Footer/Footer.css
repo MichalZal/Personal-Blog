@@ -1,13 +1,14 @@
 .footer {
   max-width: 100%;
   width: 100%;
-  background-color: black;
-  margin: 0 auto;
+  background-image: linear-gradient(to bottom, rgba(150, 170, 0, 0.4), rgba(150, 0, 255, 0.3));
+  margin: 7rem auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  clip-path: polygon(41% 36%, 76% 22%, 100% 35%, 100% 100%, 0 100%, 0 10%);
-  padding: 20rem 1rem 3rem 1rem;
+  -webkit-clip-path: polygon(54% 2%, 86% 12%, 100% 6%, 100% 100%, 0 100%, 0 0, 23% 11%);
+  clip-path: polygon(54% 2%, 86% 12%, 100% 6%, 100% 100%, 0 100%, 0 0, 23% 11%);
+  padding: 7rem 1rem 3rem 1rem;
 }
 .footer-section1 {
   color: white;
