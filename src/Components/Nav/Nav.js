@@ -16,7 +16,7 @@ const Nav = () => {
       <nav className='navbar'>
         <div className='navbarLogo'>
           <a href="../../App.js">
-          <div className='name'>Michał</div><div className='secondName'>Zalewski</div>
+            <div className='name'>Michał</div><div className='secondName'>Zalewski</div>
           </a>
         </div>
         <div className='navbarLinks'>
