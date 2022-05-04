@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { BsGithub, BsFacebook } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai'
 import './Nav.css'
