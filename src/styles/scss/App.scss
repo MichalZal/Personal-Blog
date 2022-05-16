@@ -29,8 +29,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
-	overflow: hidden;
+	line-height: 1.2;
+	overflow-x: hidden;
+	background-color: white;
+	background-image: linear-gradient(to top right,rgba(150,50,50, 0.4), rgba(218, 240, 21, 0.3));
 }
 ol, ul {
 	list-style: none;
@@ -53,11 +55,6 @@ table {
     font-family: 'Arial', sans-serif
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('../../svg/secondImage.jpg');
-}
 
 .App {
     display: grid;

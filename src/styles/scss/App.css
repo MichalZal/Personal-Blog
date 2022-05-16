@@ -30,8 +30,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-  line-height: 1;
-  overflow: hidden;
+  line-height: 1.2;
+  overflow-x: hidden;
+  background-color: white;
+  background-image: linear-gradient(to top right, rgba(150, 50, 50, 0.4), rgba(218, 240, 21, 0.3));
 }
 
 ol, ul {
@@ -58,16 +60,9 @@ table {
   font-family: "Arial", sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-}
-
 .App {
   display: grid;
   grid-template-columns: 1fr;
-  overflow-y: 'scroll',
 }
 
 /*# sourceMappingURL=App.css.map */
