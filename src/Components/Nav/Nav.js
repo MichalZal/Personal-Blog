@@ -20,6 +20,7 @@ const Nav = () => {
           </a>
         </div>
         <div className='navbarLinks'>
+          // new component
           <div className='socialLinks'>
             <div className='facebook'>
               <a href="https://www.facebook.com/Michalzalewsk">
@@ -37,6 +38,8 @@ const Nav = () => {
               </a>
             </div>
           </div>
+    
+          // new component
           <ul className='ul'>
             <li className='navbarLink'> <a href='../../App.js'> Strona Główna</a></li>
             <li className='navbarLink'> <a href='../../Projects.js'> Projekty </a></li>
@@ -44,6 +47,8 @@ const Nav = () => {
             <li className='navbarLink'> <a href='../../Contact.js'> Kontakt </a></li>
           </ul>
         </div>
+    
+        // new component
         <div className='hamMenu' onClick={toggleHamMenu}>
           <span className="bar" id="bar1"></span>
           <span className="bar" id="bar2"></span>
