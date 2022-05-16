@@ -1,9 +1,12 @@
-@use '../../styles/scss/colors';
+@use '../../styles/scss/colors' as *;
 
 .footer {
     max-width: 100%;
     width: 100%;
-    background-image: linear-gradient(to bottom, rgba(150,170,0, 0.4), rgba(150,0,255,0.3));
+    position: relative;
+    bottom: 0;
+    // background-image: linear-gradient(to bottom, rgba(150,170,0, 0.4), rgba(150,0,255,0.3));
+    background-color: $background-color;
     margin: 7rem auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -12,16 +15,17 @@
     clip-path: polygon(54% 2%, 86% 12%, 100% 6%, 100% 100%, 0 100%, 0 0, 23% 11%);
     padding: 7rem 1rem 3rem 1rem;
     
+    .footer-info {
+        margin: 1rem;
+    }
     &-section1 {
         color: white;
         display: grid;
-        gap: .3rem;
     }
 
     &-section2 {
         color: white;
         display: grid;
-        gap: .3rem;
     }
 
 

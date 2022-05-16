@@ -1,17 +1,17 @@
-@use '../../styles/scss/colors' as v;
+@use '../../styles/scss/colors' as *;
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Poppins:wght@100&display=swap');
 
 
 $background-color: black;
-$secondBackground-color: gray;
-$font-color: black;
+$secondBackground-color: black;
+$font-color: white;
 $second-font-color: white;
 
 $font-clr-white: white;
-$btn-clr: rgba(150,0,255,0.9);
+$btn-clr: white;//rgba(150,0,255,0.9);
 
 
-$font-color-hover: gray;
+$font-color-hover: black;
 $font-family: 'Poppins', sans-serif;
 $facebook-color: #3b5998;
 $github-color: #171515;
@@ -24,12 +24,10 @@ $h1-size: 1.5rem;
 $p-size: .8rem;
 
 
-
-
-
 .color {
     width: 100%;
-    background-image: linear-gradient(to top, rgba(150,170,0, 0.3), rgba(150,0,255,0.3));
+    // background-image: linear-gradient(to top, rgba(150,170,0, 0.3), rgba(150,0,255,0.3));
+    background-color: black;
     backdrop-filter: blur(2px);
     -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 93%, 84% 100%, 12% 100%, 0 90%, 0 0);
     clip-path: polygon(50% 0%, 100% 0, 100% 93%, 84% 100%, 12% 100%, 0 90%, 0 0);
@@ -39,6 +37,8 @@ $p-size: .8rem;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr auto;
+    row-gap: .5rem;
+
     align-items: center;
     border-radius: 2rem;
     position: relative;
@@ -46,238 +46,11 @@ $p-size: .8rem;
     margin: 0 auto;
     margin-bottom: 5rem;
 
-    // navbar logo
-    .navbarLogo {
-        grid-column: 1/2;
-        display: flex;
-        position: relative;
-        top: -30px;
-        margin: 3rem .5rem 1rem .5rem;
-        padding: 0 1rem;
-        max-width: 100%;
-
-        font-size: clamp(1.5rem, 1.6vw, 2.7rem);
-        a {
-            text-decoration: none;
-            font-family: 'Grape Nuts', cursive;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 2.5em;
-            color: $font-color;
-            line-height: 1.3;
-
-            .name {
-                font-family: 'Grape Nuts', cursive;
-                z-index: 10;
-            }
-
-            .secondName {
-                font-family: 'Grape Nuts', cursive;
-                z-index: 10;
-
-                &::after {
-                    content: ' ';
-                    display: block;
-                    position: relative;
-                    top: -30px;
-                    right: -30px;
-                    width: 130px;
-                    height: 20px;
-                    background: $secondBackground-color;
-                    z-index: -1;
-                    clip-path: circle(75px);
-                    transition: all .2s ease-in-out;
-                }
-
-                &:hover::after {
-                    background: $secondBackground-color;
-                    width: 220px !important;
-                    right: 25px;
-                    border-radius: .6rem;
-                }
-            }
-        }
-    }
-    // end of navar logo
-
-
-
-    // navbar links
-    .navbarLinks {
-        position: relative;
-        top: 1rem;
-
-        display: flex;
-        text-align: center;
-        justify-self: center;
-        gap: 1rem;
-        right: 1rem;
-
-        ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-        }
-
-        .navbarLink {
-            margin: .2rem;
-            transition: .6s background-color ease-out;
-            border-radius: .4rem;
-            a {
-                display: inline-block;
-                padding: .6rem;
-                width: 100%;
-                text-decoration: none;
-                color: $btn-clr;
-                font-family: 'Poppins', sans-serif;
-                font-weight: bold;
-                font-size: clamp($base-font-size, 3vw, $big-font-size);
-            }
-        }
-
-        .navbarLink:hover {
-            background-color: $btn-clr;
-            a {
-                text-shadow: 1px 2px 1rem $font-color-hover;
-                color: white;
-            }
-        }
-        .navbarLink:first-child {
-            padding: .45rem;
-            background-color: $btn-clr;
-            border-radius: 0.3rem;
-
-        }
-        .navbarLink:first-child:hover {
-            background-color: transparent;
-            outline: 2px solid $btn-clr;
-            a {
-                color: $btn-clr;
-            }
-        }
-        .navbarLink:first-child a {
-            color: $second-font-color;
-        }
-
-        .socialLinks {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: 1rem;
-            padding: .2rem 0rem;
-            font-size: clamp($base-font-size, 3vw, $big-font-size);
-
-            // background-color: $background-color;
-            font-family: $font-family;
-            font-weight: bold;
-            text-transform: capitalize;
-            transition: .6s all ease-out;
-
-            .facebook {
-                background-color: $facebook-color;
-                border-radius: .4rem;
-                transition: all .2s ease-out;
-                a{
-                    display: inline-block;
-                    padding: .5rem .5rem 0rem .5rem;
-                    color: $font-clr-white;
-                    text-decoration: none;
-                    transition: all .2s ease-out;
-                    .face-logo {
-                        font-size: 2em;
-                    }
-                }
-                &:hover,
-                &:focus {
-                    outline: 1px solid black;
-                    a {
-                        background-color: rgba(0,0,255,0.3);
-                    }
-                }
-            }
-
-            .github {
-                background-color: $github-color;
-                border-radius: .4rem;
-                a{
-                    display: inline-block;
-                    padding: .5rem .5rem 0rem .5rem;
-                    color: $font-clr-white;
-                    text-decoration: none;
-                    .git-logo {
-                        font-size: 2em;
-                    }
-                }
-                &:hover,
-                &:focus {
-                    outline: 1px solid black;
-                    a {
-                        background-color: rgba(255,255,255,0.2);
-                    }
-                }
-            }
-            .instagram {
-                background: $instagram-color;
-                border-radius: .4rem;
-                a{
-                    display: inline-block;
-                    padding: .5rem .5rem 0rem .5rem;
-                    color: $font-clr-white;
-                    text-decoration: none;
-                    .insta-logo {
-                        font-size: 2.1em;
-                    }
-                }
-                &:hover,
-                &:focus {
-                    outline: 1px solid black;
-                    a {
-                        background-color: rgba(1,1,1,0.2);
-                    }
-                }
-            }
-        }
-    }
-    // end of navbar links
-
-
-    // info
-    .info {
-        grid-column: 1/ 3;
-        justify-content: center;
-        justify-items: center;
-        max-width: 100%;
-        line-height: 1.5;
-        letter-spacing: 1px;
-        margin-bottom: 2rem;
-        padding: 1rem 2rem;
-        .about {
-            font-size: clamp(1.1rem, 1.2vw, 1.3rem);
-            color: black;
-            font-family: $font-family;
-            font-weight: bold;
-            position: relative;
-        }
-        .link {
-            background-image: linear-gradient(to right, rgba(150,0,255,0.3), rgba(250,0,150, 0.3));
-            background-size: 0% 2.5px;
-            background-repeat: no-repeat;
-            background-position: left bottom;
-            transition: 300ms all ease-out;
-        }
-        .link:hover {
-            background-size: 100% 2.5px;
-        }
-    }
-    // end of info
-
-
     @media (max-width: 750px) {
         .navbarLinks {
             position: absolute;
             right: -200px;
-            top: 10px;
+            top: 0;
             transition: .2s all ease-in-out;
             .socialLinks {
                 display: none;

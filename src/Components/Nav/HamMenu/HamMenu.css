@@ -1,0 +1,39 @@
+.hamMenu-active {
+  position: relative;
+  right: 20px;
+}
+.hamMenu-active #bar1 {
+  transform: rotate(-45deg) translate(-5px, 15px);
+}
+.hamMenu-active #bar3 {
+  transform: rotate(45deg) translate(-5px, -13px);
+}
+.hamMenu-active #bar2 {
+  width: 0px;
+}
+
+@media (max-width: 750px) {
+  .hamMenu {
+    width: 50px;
+    height: 50px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -10px;
+    right: 30px;
+    align-items: flex-end;
+  }
+  .hamMenu .bar {
+    width: 45px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+  }
+  .hamMenu #bar2 {
+    width: 25px;
+  }
+}
+
+/*# sourceMappingURL=HamMenu.css.map */

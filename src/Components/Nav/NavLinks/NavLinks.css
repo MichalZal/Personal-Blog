@@ -1,0 +1,153 @@
+.navbarLinks {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-self: center;
+  gap: 1rem;
+  right: 1rem;
+}
+.navbarLinks ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.navbarLinks .navbarLink {
+  margin: 0.2rem;
+  transition: 0.6s background-color ease-out;
+  border-radius: 0.4rem;
+}
+.navbarLinks .navbarLink a {
+  display: inline-block;
+  padding: 0.6rem;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+.navbarLinks .navbarLink:hover {
+  background-color: white;
+}
+.navbarLinks .navbarLink:hover a {
+  text-shadow: 1px 2px 1rem black;
+  color: white;
+}
+.navbarLinks .navbarLink:first-child {
+  padding: 0.3rem;
+  background-color: black;
+  border-radius: 0.3rem;
+}
+.navbarLinks .navbarLink:first-child:hover {
+  background-color: transparent;
+  outline: 2px solid white;
+}
+.navbarLinks .navbarLink:first-child:hover a {
+  color: white;
+}
+.navbarLinks .navbarLink:first-child a {
+  color: white;
+}
+.navbarLinks .socialLinks {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0.2rem 0rem;
+  margin-top: 10px;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: 0.6s all ease-out;
+}
+.navbarLinks .socialLinks .facebook {
+  background-color: #3b5998;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease-out;
+}
+.navbarLinks .socialLinks .facebook a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
+.navbarLinks .socialLinks .facebook a .face-logo {
+  font-size: 1.5em;
+}
+.navbarLinks .socialLinks .facebook:hover, .navbarLinks .socialLinks .facebook:focus {
+  outline: 1px solid black;
+}
+.navbarLinks .socialLinks .facebook:hover a, .navbarLinks .socialLinks .facebook:focus a {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+.navbarLinks .socialLinks .github {
+  background-color: #171515;
+  border-radius: 0.4rem;
+}
+.navbarLinks .socialLinks .github a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+.navbarLinks .socialLinks .github a .git-logo {
+  font-size: 1.5em;
+}
+.navbarLinks .socialLinks .github:hover, .navbarLinks .socialLinks .github:focus {
+  outline: 1px solid black;
+}
+.navbarLinks .socialLinks .github:hover a, .navbarLinks .socialLinks .github:focus a {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.navbarLinks .socialLinks .instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-radius: 0.4rem;
+}
+.navbarLinks .socialLinks .instagram a {
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+.navbarLinks .socialLinks .instagram a .insta-logo {
+  font-size: 1.5em;
+}
+.navbarLinks .socialLinks .instagram:hover, .navbarLinks .socialLinks .instagram:focus {
+  outline: 1px solid black;
+}
+.navbarLinks .socialLinks .instagram:hover a, .navbarLinks .socialLinks .instagram:focus a {
+  background-color: rgba(1, 1, 1, 0.2);
+}
+
+@media (max-width: 750px) {
+  .navbarLinks {
+    position: absolute;
+    right: -200px;
+    transition: 0.2s all ease-in-out;
+  }
+  .navbarLinks .socialLinks {
+    display: none;
+    background-color: none;
+  }
+  .navbarLinks .socialLinks .github {
+    display: none;
+  }
+  .navbarLinks .socialLinks .facebook {
+    display: none;
+  }
+
+  .navbarLinks-active {
+    display: flex;
+    flex-direction: column;
+    transition: 1s all ease;
+    position: absolute;
+    right: 11vw;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=NavLinks.css.map */

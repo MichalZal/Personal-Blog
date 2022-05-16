@@ -1,7 +1,9 @@
 .footer {
   max-width: 100%;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgba(150, 170, 0, 0.4), rgba(150, 0, 255, 0.3));
+  position: relative;
+  bottom: 0;
+  background-color: black;
   margin: 7rem auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,15 +12,16 @@
   clip-path: polygon(54% 2%, 86% 12%, 100% 6%, 100% 100%, 0 100%, 0 0, 23% 11%);
   padding: 7rem 1rem 3rem 1rem;
 }
+.footer .footer-info {
+  margin: 1rem;
+}
 .footer-section1 {
   color: white;
   display: grid;
-  gap: 0.3rem;
 }
 .footer-section2 {
   color: white;
   display: grid;
-  gap: 0.3rem;
 }
 
 @media (max-width: 500px) {

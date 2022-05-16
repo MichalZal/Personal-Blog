@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Poppins:wght@100&display=swap");
 .color {
   width: 100%;
-  background-image: linear-gradient(to top, rgba(150, 170, 0, 0.3), rgba(150, 0, 255, 0.3));
+  background-color: black;
   backdrop-filter: blur(2px);
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 93%, 84% 100%, 12% 100%, 0 90%, 0 0);
   clip-path: polygon(50% 0%, 100% 0, 100% 93%, 84% 100%, 12% 100%, 0 90%, 0 0);
@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: 1fr auto;
+  row-gap: 0.5rem;
   align-items: center;
   border-radius: 2rem;
   position: relative;
@@ -18,207 +19,11 @@
   margin: 0 auto;
   margin-bottom: 5rem;
 }
-.navbar .navbarLogo {
-  grid-column: 1/2;
-  display: flex;
-  position: relative;
-  top: -30px;
-  margin: 3rem 0.5rem 1rem 0.5rem;
-  padding: 0 1rem;
-  max-width: 100%;
-  font-size: clamp(1.5rem, 1.6vw, 2.7rem);
-}
-.navbar .navbarLogo a {
-  text-decoration: none;
-  font-family: "Grape Nuts", cursive;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 2.5em;
-  color: black;
-  line-height: 1.3;
-}
-.navbar .navbarLogo a .name {
-  font-family: "Grape Nuts", cursive;
-  z-index: 10;
-}
-.navbar .navbarLogo a .secondName {
-  font-family: "Grape Nuts", cursive;
-  z-index: 10;
-}
-.navbar .navbarLogo a .secondName::after {
-  content: " ";
-  display: block;
-  position: relative;
-  top: -30px;
-  right: -30px;
-  width: 130px;
-  height: 20px;
-  background: gray;
-  z-index: -1;
-  clip-path: circle(75px);
-  transition: all 0.2s ease-in-out;
-}
-.navbar .navbarLogo a .secondName:hover::after {
-  background: gray;
-  width: 220px !important;
-  right: 25px;
-  border-radius: 0.6rem;
-}
-.navbar .navbarLinks {
-  position: relative;
-  top: 1rem;
-  display: flex;
-  text-align: center;
-  justify-self: center;
-  gap: 1rem;
-  right: 1rem;
-}
-.navbar .navbarLinks ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-.navbar .navbarLinks .navbarLink {
-  margin: 0.2rem;
-  transition: 0.6s background-color ease-out;
-  border-radius: 0.4rem;
-}
-.navbar .navbarLinks .navbarLink a {
-  display: inline-block;
-  padding: 0.6rem;
-  width: 100%;
-  text-decoration: none;
-  color: rgba(150, 0, 255, 0.9);
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: clamp(1rem, 3vw, 1.3rem);
-}
-.navbar .navbarLinks .navbarLink:hover {
-  background-color: rgba(150, 0, 255, 0.9);
-}
-.navbar .navbarLinks .navbarLink:hover a {
-  text-shadow: 1px 2px 1rem gray;
-  color: white;
-}
-.navbar .navbarLinks .navbarLink:first-child {
-  padding: 0.45rem;
-  background-color: rgba(150, 0, 255, 0.9);
-  border-radius: 0.3rem;
-}
-.navbar .navbarLinks .navbarLink:first-child:hover {
-  background-color: transparent;
-  outline: 2px solid rgba(150, 0, 255, 0.9);
-}
-.navbar .navbarLinks .navbarLink:first-child:hover a {
-  color: rgba(150, 0, 255, 0.9);
-}
-.navbar .navbarLinks .navbarLink:first-child a {
-  color: white;
-}
-.navbar .navbarLinks .socialLinks {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1rem;
-  padding: 0.2rem 0rem;
-  font-size: clamp(1rem, 3vw, 1.3rem);
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  text-transform: capitalize;
-  transition: 0.6s all ease-out;
-}
-.navbar .navbarLinks .socialLinks .facebook {
-  background-color: #3b5998;
-  border-radius: 0.4rem;
-  transition: all 0.2s ease-out;
-}
-.navbar .navbarLinks .socialLinks .facebook a {
-  display: inline-block;
-  padding: 0.5rem 0.5rem 0rem 0.5rem;
-  color: white;
-  text-decoration: none;
-  transition: all 0.2s ease-out;
-}
-.navbar .navbarLinks .socialLinks .facebook a .face-logo {
-  font-size: 2em;
-}
-.navbar .navbarLinks .socialLinks .facebook:hover, .navbar .navbarLinks .socialLinks .facebook:focus {
-  outline: 1px solid black;
-}
-.navbar .navbarLinks .socialLinks .facebook:hover a, .navbar .navbarLinks .socialLinks .facebook:focus a {
-  background-color: rgba(0, 0, 255, 0.3);
-}
-.navbar .navbarLinks .socialLinks .github {
-  background-color: #171515;
-  border-radius: 0.4rem;
-}
-.navbar .navbarLinks .socialLinks .github a {
-  display: inline-block;
-  padding: 0.5rem 0.5rem 0rem 0.5rem;
-  color: white;
-  text-decoration: none;
-}
-.navbar .navbarLinks .socialLinks .github a .git-logo {
-  font-size: 2em;
-}
-.navbar .navbarLinks .socialLinks .github:hover, .navbar .navbarLinks .socialLinks .github:focus {
-  outline: 1px solid black;
-}
-.navbar .navbarLinks .socialLinks .github:hover a, .navbar .navbarLinks .socialLinks .github:focus a {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.navbar .navbarLinks .socialLinks .instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  border-radius: 0.4rem;
-}
-.navbar .navbarLinks .socialLinks .instagram a {
-  display: inline-block;
-  padding: 0.5rem 0.5rem 0rem 0.5rem;
-  color: white;
-  text-decoration: none;
-}
-.navbar .navbarLinks .socialLinks .instagram a .insta-logo {
-  font-size: 2.1em;
-}
-.navbar .navbarLinks .socialLinks .instagram:hover, .navbar .navbarLinks .socialLinks .instagram:focus {
-  outline: 1px solid black;
-}
-.navbar .navbarLinks .socialLinks .instagram:hover a, .navbar .navbarLinks .socialLinks .instagram:focus a {
-  background-color: rgba(1, 1, 1, 0.2);
-}
-.navbar .info {
-  grid-column: 1/3;
-  justify-content: center;
-  justify-items: center;
-  max-width: 100%;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  margin-bottom: 2rem;
-  padding: 1rem 2rem;
-}
-.navbar .info .about {
-  font-size: clamp(1.1rem, 1.2vw, 1.3rem);
-  color: black;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  position: relative;
-}
-.navbar .info .link {
-  background-image: linear-gradient(to right, rgba(150, 0, 255, 0.3), rgba(250, 0, 150, 0.3));
-  background-size: 0% 2.5px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: 300ms all ease-out;
-}
-.navbar .info .link:hover {
-  background-size: 100% 2.5px;
-}
 @media (max-width: 750px) {
   .navbar .navbarLinks {
     position: absolute;
     right: -200px;
-    top: 10px;
+    top: 0;
     transition: 0.2s all ease-in-out;
   }
   .navbar .navbarLinks .socialLinks {
@@ -245,7 +50,7 @@
   .navbar .hamMenu .bar {
     width: 45px;
     height: 4px;
-    background-color: black;
+    background-color: white;
     border-radius: 5px;
     transition: all 0.2s ease-out;
   }
